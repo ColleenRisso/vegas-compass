@@ -1,0 +1,11 @@
+{
+  "name": "vegas-compass",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ColleenRisso/vegas-compass.git",
+  "author": "Colleen Risso <colleenrisso@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node app.js"
+  }
+}
