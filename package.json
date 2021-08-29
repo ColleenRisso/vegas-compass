@@ -6,14 +6,8 @@
   "author": "Colleen Risso <colleenrisso@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "concurrently \"webpack-dev-server\" \"node server/index.js\"",
-    "dev-old": "webpack serve",
-    "build": "webpack --mode production",
-    "start-static": "node app.js",
-    "start-old": "node server/index.js",
-    "start-server": "node server/index.js",
-    "dev-server": "nodemon server/index.js",
-    "dev-start": "webpack-dev-server --open"
+    "build": "webpack",
+    "heroku-postbuild": "webpack --config webpack.config.js"
   },
   "babel": {
     "presets": [
