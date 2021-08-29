@@ -6,10 +6,11 @@
   "author": "Colleen Risso <colleenrisso@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack serve",
-    "start": "node server/index.js",
+    "dev": "concurrently \"webpack-dev-server\" \"node server/index.js\"",
+    "dev-old": "webpack serve",
     "build": "webpack --mode production",
-    "start-old": "node app.js",
+    "start-static": "node app.js",
+    "start-old": "node server/index.js",
     "start-server": "node server/index.js",
     "dev-server": "nodemon server/index.js",
     "dev-start": "webpack-dev-server --open"
