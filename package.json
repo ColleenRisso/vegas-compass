@@ -6,8 +6,9 @@
   "author": "Colleen Risso <colleenrisso@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node server/index.js",
-    "heroku-postbuild": "webpack-dev-server"
+    "dev": "webpack-dev-server --open",
+    "start": "webpack serve",
+    "build": "webpack --mode production"
   },
   "babel": {
     "presets": [
@@ -16,17 +17,8 @@
     ]
   },
   "dependencies": {
-    "@koa/router": "^10.1.1",
-    "concurrently": "^6.2.1",
     "heroku": "^7.59.0",
     "html-webpack-plugin": "^5.3.2",
-    "koa": "^2.13.1",
-    "koa-body": "^4.2.0",
-    "koa-bodyparser": "^4.3.0",
-    "koa-logger": "^3.2.1",
-    "koa-mount": "^4.0.0",
-    "koa-router": "^10.1.1",
-    "koa2-cors": "^2.0.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "uuid": "^8.3.2"
