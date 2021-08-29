@@ -6,6 +6,17 @@
   "author": "Colleen Risso <colleenrisso@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev-backend": "nodemon backend/server.js"
+  },
+  "dependencies": {
+    "@koa/router": "^10.1.1",
+    "koa": "^2.13.1",
+    "koa-body": "^4.2.0",
+    "koa-logger": "^3.2.1",
+    "koa-mount": "^4.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
   }
 }
