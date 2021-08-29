@@ -6,8 +6,6 @@
   "author": "Colleen Risso <colleenrisso@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "concurrently \"webpack-dev-server\" \"node server/index.js\"",
-    "build": "webpack --mode production",
     "start": "node server/index.js",
     "heroku-postbuild": "webpack --config webpack.config.js"
   },
