@@ -1,22 +1,49 @@
 {
   "name": "vegas-compass",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "repository": "https://github.com/ColleenRisso/vegas-compass.git",
   "author": "Colleen Risso <colleenrisso@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node app.js",
-    "dev-backend": "nodemon backend/server.js"
+    "dev": "webpack serve",
+    "start": "node server/index.js",
+    "build": "webpack --mode production",
+    "start-old": "node app.js",
+    "start-server": "node server/index.js",
+    "dev-server": "nodemon server/index.js",
+    "dev-start": "webpack-dev-server --open"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
   },
   "dependencies": {
     "@koa/router": "^10.1.1",
     "koa": "^2.13.1",
     "koa-body": "^4.2.0",
+    "koa-bodyparser": "^4.3.0",
     "koa-logger": "^3.2.1",
-    "koa-mount": "^4.0.0"
+    "koa-mount": "^4.0.0",
+    "koa-router": "^10.1.1",
+    "koa2-cors": "^2.0.6",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.12"
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "nodemon": "^2.0.12",
+    "style-loader": "^3.2.1",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.0.0"
   }
 }
