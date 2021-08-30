@@ -7,10 +7,9 @@
   "license": "MIT",
   "scripts": {
     "start": "node server/index.js",
-    "heroku-postbuild": "webpack --config webpack.config.js",
-    "build-dev": "rm -rf dist && webpack --mode development",
-    "build-prod": "rm -rf dist && webpack --mode production",
-    "local-dev": "concurrently \"node server/index.js\" \"webpack-dev-server --open\""
+    "build": "rm -rf build && webpack --mode production",
+    "dev-build": "rm -rf build && webpack --mode development",
+    "dev-local": "concurrently \"node server/index.js\" \"webpack-dev-server --open\""
   },
   "babel": {
     "presets": [
