@@ -1,12 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom';
+import Orders from './components/Orders.jsx';
 
-class App extends React.Component{
-    render(){
-        return(
-            <div>Colleen's Test!</div>
-        )
-    }
-}
+const App = () => (
+    <Orders />
+)
 
-ReactDOM.render(<App />, document.getElementById('app'))
+ReactDOM.render(<App />, document.getElementById('app'));

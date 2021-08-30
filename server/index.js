@@ -11,7 +11,7 @@ app.use(cors({ allowMethods: ['GET', 'PUT', 'PATCH', 'POST', 'DELETE'] }))
     .use(ordersRouter.routes())
 
 const server = app.listen(PORT, () => {
-    console.log('The server is running on' + PORT);
+    console.log(`The server is running at http://localhost:${PORT}`);
 });
 
 module.exports = server;

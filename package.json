@@ -1,13 +1,16 @@
 {
   "name": "vegas-compass",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "app/index.js",
   "repository": "https://github.com/ColleenRisso/vegas-compass.git",
   "author": "Colleen Risso <colleenrisso@gmail.com>",
   "license": "MIT",
   "scripts": {
     "start": "node server/index.js",
-    "heroku-postbuild": "webpack --config webpack.config.js"
+    "heroku-postbuild": "webpack --config webpack.config.js",
+    "build-dev": "rm -rf dist && webpack --mode development",
+    "build-prod": "rm -rf dist && webpack --mode production",
+    "local-dev": "concurrently \"node server/index.js\" \"webpack-dev-server --open\""
   },
   "babel": {
     "presets": [
@@ -19,6 +22,7 @@
     "@koa/router": "^10.1.1",
     "concurrently": "^6.2.1",
     "heroku": "^7.59.0",
+    "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.2",
     "koa": "^2.13.1",
     "koa-body": "^4.2.0",
@@ -27,6 +31,7 @@
     "koa-mount": "^4.0.0",
     "koa-router": "^10.1.1",
     "koa2-cors": "^2.0.6",
+    "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "uuid": "^8.3.2"
